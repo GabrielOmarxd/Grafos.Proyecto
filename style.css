@@ -1,0 +1,386 @@
+body {
+  margin: 0;
+  color: #e8e8e8;
+  background: #252525;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+*:link {
+  color: rgb(106, 196, 232)
+}
+.header {
+  overflow: hidden;
+  background-color: #474747;
+  padding: 5px 5px;
+  border-bottom: #303030 3px solid;
+}
+
+button, .toolOpciones {
+  float: left;
+  color: #e8e8e8;
+  text-align: center;
+  padding: 2px 4px;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 25px;
+  margin: 0 8px;
+  background: none;
+  border: 0;
+  user-select: none;
+}
+.logo {
+  height: 25px;
+  width: 25px;
+  padding: 2px;
+  border-radius: 4px;
+  float: left;
+  filter: invert(0.91);
+  user-select: none;
+  cursor: pointer;
+}
+
+.logo:hover{
+  background-color: #eee;
+}
+
+button:hover, .activo {
+  background-color: #252525;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.header-derecha {
+  float: right;
+}
+
+.spacing {
+  width: 2px;
+  height: 20px;
+  background: #c8c8c840;
+  float: left;
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+.sidebar {
+  background: #474747;
+  overflow: hidden;
+  height: calc(100% - 45px);
+  width: 40px;
+  float: left;
+  border-top: #252525 3px solid;
+  border-right:  #252525 3px solid;
+  position: absolute;
+}
+
+
+.modal, .modal-ingreso {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  left: 0%;
+  top: 0%;
+}
+.modal-info {
+  position: relative;
+  background-color: 474747;
+  margin: calc(9% + 30px) auto;
+  padding: 20px;
+  width: 35%;
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 8px 16px;
+  min-width: 300px;
+}
+.ingreso {
+  position: relative;
+  background-color: 474747;
+  margin: calc(9% + 30px) auto;
+  width: 60%;
+  height: 14%;
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 8px 16px;
+  min-width: 300px;
+}
+.ingheader {
+  text-align: center;
+  background: #303030;
+  display: block;
+  padding: 8px;
+  font-size: larger;
+  font-weight: lighter;
+}
+.input-grafo {
+  margin: 29px 0px;
+  display: flex;
+}
+input[name="ginput"] {
+  width: 100%;
+  padding: 4px;
+  background: #303030;
+  color: #e8e8e8;
+  border: 1px solid #555;
+  margin-left: 7px;
+}
+button[type="submit"] {
+  background: #303030;
+  float: right;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+button[type="submit"]:active {
+  background: #222;
+}
+.about-titulo {
+  font-size: 1.7em;
+  margin-top: 1px;
+}
+.about-logo {
+  width: 8vh;
+  float: left;
+  margin: 4px 12px 20px 0;
+  background: #e8e8e8;
+  border-radius: 20%;
+  border: 4px solid #e8e8e8;
+  padding: 2px;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.espacio {
+  float: left;
+  position: absolute;
+}
+
+.propiedades {
+  cursor: pointer;
+}
+
+.plan, .comp {
+  display: none;
+}
+
+.propiedades, .matrizmenu, .na-nv, .label-c, .label-ady, .re, .tipo, .conexo, .plano, .completo, .ncroma, .regular, .circuito-eu, .grafo-eu, .camino-eu, .hamilton {
+  background: #303030;
+  display: block;
+  text-align: center;
+  border-bottom: 3px solid #252525;
+  color: #e8e8e8;
+  font-weight: lighter;
+}
+.derecha {
+  float: right !important;
+  right: 0 !important;
+  width: auto;
+  min-width: 132px;
+  z-index: 1;
+  height: 22px;
+}
+
+.derecha > p {
+  text-align: center;
+  margin: 0;
+  background: #303030;
+  border-top: 3px solid #252525;
+  font-weight: lighter;
+}
+
+.nvertices, .naristas {
+  text-decoration: underline dotted;
+  cursor: pointer;
+}
+
+.label-c, .label-ady {
+  display: none;
+}
+
+img[alt="mas"] {
+  display: block;
+}
+img[alt="menos"] {
+  display: none;
+}
+
+img[alt="mas"], img[alt="menos"] {
+  position: absolute;
+  filter: invert(.8);
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.matriz-ady, .matriz-c {
+  width: auto;
+  height: auto;
+  background: #7d7d7d;
+  margin: 8px;
+  padding: 0 10px;
+  display: none;
+}
+
+.analisis > * {
+  margin: 0;
+  text-align: center;
+}
+
+.analisis > * {
+  text-align: center;
+}
+
+table {
+  display: -webkit-inline-box;
+  margin: 10px 0;
+}
+
+tbody {
+  background: #474747;
+  padding: 4px;
+  display: block;
+}
+
+tbody > :first-child {
+  background: #303030;
+}
+
+td {
+  min-inline-size: 20px;
+  text-align: center;
+}
+
+tr > :first-child {
+  background: #303030;
+  display: table-cell;
+}
+
+.arista {
+  stroke: #999;
+  stroke-width: 3.5px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  cursor: default;
+}
+
+.arista:hover {
+  stroke: #666;
+}
+.dragLine {
+  stroke-width: 5px;
+  stroke: #666;
+
+}
+.vertice {
+  cursor: pointer;
+  stroke: #e8e8e8;
+  stroke-width: 1.5px;
+}
+
+.vertice:hover {
+  stroke-width: 3px;
+  stroke: #ccc;
+}
+
+.dragLine.hidden {
+  stroke-width: 0;
+}
+.seleccionado {
+  stroke-width: 3px;
+  stroke: #fff;
+  outline: 2px dashed darkorange;
+}
+.arselect {
+  stroke: darkorange;
+  stroke-dasharray: 5,6;
+}
+.texto {
+  cursor: pointer;
+  user-select: none;
+  fill: #fff;
+  font-size:  14px;
+  stroke-width: 0.5px;
+
+}
+.tutorialTitulo {
+  text-align: center;
+  font-size: 2.1em;
+  font-weight: lighter;
+  padding: 10;
+  font-weight: lighter;
+  margin-bottom: 15px;
+  background: #252525;
+  border-radius: 20px 20px 0 0;
+}
+.visualIMG {
+  border-radius: 15px;
+  border: solid #161616 3px;
+  user-select: none;
+}
+.aboutTitulo {
+  text-align: center;
+}
+.botones {
+  font-size: 40px;
+  width: 60px;
+  height: 60px;
+  line-height: 50px;
+  border-radius: 40%;
+  text-align:center;
+  font-weight: bold;
+  position:absolute;
+  top: 155px;
+  color: #fff;
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+}
+.botones:hover {
+  cursor: pointer;
+  transform: scale(1.5,2.5);
+}
+.atras {
+  left: 2%;
+  user-select: none;
+  top: calc(50%-70px)
+}
+.adelante {
+  right: 2%;
+  user-select: none;
+  top: calc(50%-70px)
+}
+.modal-tutorial {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  left: 0%;
+  top: 0%;
+}
+.tutorial-info {
+  border-radius: 20px;
+  position: relative;
+  background-color: 474747;
+  margin: calc(9% + 30px) auto;
+  height: min-content;
+  width: 450;
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 8px 16px;
+  min-width: 450px;
+  width: min-content;
+  min-height: 46.5%;
+}
+.instrucciones, .instrucciones-2 {
+  text-align: center;
+  position: relative;
+  top: 15px;
+  font-weight: lighter;
+}
+.instrucciones {
+  display: inline;
+}
+.instrucciones-2 {
+  display: none;
+}

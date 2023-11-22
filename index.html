@@ -1,0 +1,125 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" href="img/graph.svg" type="image/x-icon">   
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+    <title>Grafos</title>
+</head>
+<body>
+    <div class="header">
+        <img class="logo" src="./img/graph.svg" alt="Logo">
+        <button class="tutorial">Tutorial</button>
+        <div class="modal-tutorial">
+            <div class="tutorial-info">
+                <div class="tutorialTitulo">
+                    <span>Instrucciones de uso</span>
+                </div>
+                <div class="aboutTitulo">
+                    <div class="atras botones">
+                        &#60
+                    </div>
+                    <div class="adelante botones">
+                        &#62
+                    </div>
+                    <img class="visualIMG" src="./img/crearg.gif" alt="" id="imagen">
+                    <br>
+                    <div class="instrucciones">
+                        <span>Click izquierdo en el espacio para crear nodo.</span><br>
+                        <span>Click derecho sobre el nodo o arista para eliminarlo.</span><br>
+                        <span>Manten click izquierdo de un nodo a otro para crear una arista.</span><br>
+                        <span>Una ves creado el grafo has click en propiedades <br> para ver toda la informacion.</span>
+                        <br><br>
+                    </div>
+                    <div class="instrucciones-2">
+                        <span>Alternativamente se pueden ingresar grafos por texto: <br>
+                            1-Click en el boton visualizar. <br>
+                            2-Ingresar los nodos conectados a crear.<br>
+                            3-Ingresarlos en formato [0,1] donde 0 es el primer nodo y<br>1 es el segundo nodo al que se conectara
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="crear activo">Crear</button>
+        <button class="visualizar">Ingresar grafo por texto</button>
+        <div class="modal-ingreso">
+            <div class="ingreso">
+                <span class="ingheader">Ingreso de datos</span>
+                <div class="input-grafo">
+                    <input  type="text" placeholder="ejemplo: [0,1],[1,2] (debe partir de 0*)" name="ginput">
+                    <button type="submit">ingresar</button>
+                </div>
+            </div>
+        </div>
+        <div class="header-middle">
+            <span class="spacing"></span>
+            <label class="toolOpciones">
+                <input type="checkbox" name="numeros" checked="true">Numeros
+                <input type="checkbox" name="flechas" checked="true">Flechas
+            </label>
+            <button class="limpiar">Limpiar</button>
+        </div>
+        <div class="header-derecha">
+            <button class="acerca"></button>
+            <div class="modal">
+                <div class="modal-info">
+                
+                    <p class="about-titulo">Proyecto Grafos</p>
+                    <img class="about-logo" src="./img/graph.svg" alt="Logo">
+                    <p class="source">Pagina web interactiva para la asignatura de Grafos y Lenguajes Formales</p>
+        
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar derecha">
+        <span class="propiedades">Propiedades</span>
+        <div class="analisis">
+            <div class="matrizhide">
+                <img src="./img/bx-plus.svg" alt="mas">
+                <img src="./img/bx-minus.svg" alt="menos">
+            </div>
+            <span class="matrizmenu">Matrices</span>
+            <span class="label-ady">Matriz Adyacente</span>
+            <div class="matriz-ady"></div>
+            <span class="label-c">Matriz C</span>
+            <div class="matriz-c"></div>
+        </div>
+        <div class="na-nv">
+            <span>Vertices</span>
+            <span class="nvertices"></span>
+            <span>Aristas</span>
+            <span class="naristas"></span>
+        </div>
+        <div class="re">
+            <span>Regiones</span>
+            <span class="region"></span>
+        </div>
+        <span class="tipo"></span>
+        <span class="conexo"></span>
+        <div class="plan">
+            <span class="plano"></span>
+        </div>
+        <div class="comp">
+            <span class="completo"></span>
+        </div>
+        <span class="ncroma"></span>
+        <span class="regular"></span>
+        <div class="euleriano">
+            <span class="circuito-eu"></span>
+            <span class="camino-eu"></span>
+            <span class="grafo-eu"></span>
+        </div>
+        <span class="hamilton"></span>
+    </div>
+    <svg class="espacio">
+    </svg>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+</body>
+</html>
